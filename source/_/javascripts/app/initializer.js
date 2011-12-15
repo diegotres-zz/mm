@@ -4,8 +4,8 @@ var global = typeof window !== "undefined" ? window : this;
 
 // CREATING NAMESPACES
 ;(function( global, undefined ) {
-  if( typeof global.NS === 'undefined' ) {
-    global.NS = {
+  if( typeof global.PROJECT_NAMESPACE === 'undefined' ) {
+    global.PROJECT_NAMESPACE = {
         Models      : {}
       , Views       : {}
       , Collections : {}
