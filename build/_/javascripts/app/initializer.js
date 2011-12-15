@@ -1,0 +1,2 @@
+// DEFINE A GLOBAL
+var global=typeof window!="undefined"?window:this;(function(a,b){typeof a.NS=="undefined"&&(a.NS={Models:{},Views:{},Collections:{},Routers:{},Helpers:{}})})(global),$(function(){NS.application=new NS.Views.Application})
