@@ -17,7 +17,7 @@ var global = typeof window !== "undefined" ? window : this;
 
 // ENTRY POINT OF APPLICATION
 $(function() {
-  NS.application = new NS.Views.Application;
+  PROJECT_NAMESPACE.application = new PROJECT_NAMESPACE.Views.Application;
 });
 
 

@@ -1,4 +1,4 @@
-NS.Views.HomeIndex = Backbone.View.extend({
+PROJECT_NAMESPACE.Views.HomeIndex = Backbone.View.extend({
   
   initialize: function() {
     console.log( 'Home: initialize' );
