@@ -1,30 +1,31 @@
-// ############################################################################
-// COMMENTS
-// ############################################################################
-//= require "_comments"
+//= require_self
+// ---------------------------------------------|
+// Javascripts combined in one file.
+// Modules included:
+// 
 
-// ############################################################################
-// VENDORS: CORE
-// ############################################################################
-//= require "vendors/core/_modernizr"
-//= require "vendors/core/_underscore"
-//= require "vendors/core/_underscore.string"
-//= require "vendors/core/_json2"
-//= require "vendors/core/_jquery"
-//= require "vendors/core/_backbone"
 
-// ############################################################################
-// VENDORS: PLUGINS
-// ############################################################################
-// ...
+// - Vendors: Core
+// ---------------------------------------------|
+//= require "_vendors/core/modernizr"
+//= require "_vendors/core/underscore"
+//= require "_vendors/core/underscore.string"
+//= require "_vendors/core/json2"
+//= require "_vendors/core/jquery"
+//= require "_vendors/core/backbone"
 
-// ############################################################################
-// APPLICATION: INITIALIZER
-// ############################################################################
-//= require "app/_initializer"
 
-// ############################################################################
-// APPLICATION: FILES
-// ############################################################################
-//= require "app/views/_application"
-//= require "app/views/home/_index"
+// - Vendors: Plugins
+// ---------------------------------------------|
+//= require_tree "./_vendors/plugins"
+
+
+// - Application: Initializer
+// ---------------------------------------------|
+//= require "_app/initializer"
+
+
+// - Application: MVC Files
+// ---------------------------------------------|
+//= require "_app/views/application"
+//= require "_app/views/home/index"

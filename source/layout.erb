@@ -8,9 +8,10 @@
     <%= stylesheet_link_tag "main.css?#{timestamp}" %>
     
     <!-- javascripts -->
-    <%= javascript_include_tag  "vendors/core/livereload.js?host=localhost" if :env == 'development' %>
+    <%= javascript_include_tag  "_vendors/core/livereload.js?host=#{server_name}" if environment == 'development' %>
     <%= javascript_include_tag  "main.js?#{timestamp}" %>
     
+    <!-- page content for head -->
     <%= yield_content :head %>
   </head>
   
@@ -29,6 +30,6 @@
     <!-- FOOTER
     ======================================================================= -->
     <%= partial "shared/footer" %>
-    
+
   </body>
 </html>
