@@ -14,13 +14,29 @@ set :css_dir, "_/stylesheets"
 set :js_dir, "_/javascripts"
 set :images_dir, "_/images"
 
+set :env, "development"
 
+# Helpers
+helpers do
+  def timestamp
+    Time.now.to_i
+  end
+  
+  # def environment
+  #   (ENV['MM_ENV'] && ENV['MM_ENV'].to_s) || 'development'
+  # end
+end
 
 
 
 # BUILD CONFIGURATION
 ###############################################################################
 configure :build do
+  
+  set :env, "production"
+  
+  # Enable cache buster
+  activate :cache_buster
   
   # erase the home directory since it will be the root of the site
   ignore "/home"
@@ -30,9 +46,6 @@ configure :build do
   
   # Minify Javascript on build
   activate :minify_javascript
-  
-  # Enable cache buster
-  # activate :cache_buster
   
   # Use relative URLs
   activate :relative_assets

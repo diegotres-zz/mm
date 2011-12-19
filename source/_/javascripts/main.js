@@ -1,17 +1,17 @@
 // ############################################################################
 // COMMENTS
 // ############################################################################
-//= require "comments"
+//= require "_comments"
 
 // ############################################################################
 // VENDORS: CORE
 // ############################################################################
-//= require "vendors/core/modernizr"
-//= require "vendors/core/underscore"
-//= require "vendors/core/underscore.string"
-//= require "vendors/core/json2"
-//= require "vendors/core/jquery"
-//= require "vendors/core/backbone"
+//= require "vendors/core/_modernizr"
+//= require "vendors/core/_underscore"
+//= require "vendors/core/_underscore.string"
+//= require "vendors/core/_json2"
+//= require "vendors/core/_jquery"
+//= require "vendors/core/_backbone"
 
 // ############################################################################
 // VENDORS: PLUGINS
@@ -21,10 +21,10 @@
 // ############################################################################
 // APPLICATION: INITIALIZER
 // ############################################################################
-//= require "app/initializer"
+//= require "app/_initializer"
 
 // ############################################################################
 // APPLICATION: FILES
 // ############################################################################
-//= require "app/views/application"
-//= require "app/views/home/index"
+//= require "app/views/_application"
+//= require "app/views/home/_index"

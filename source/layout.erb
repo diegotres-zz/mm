@@ -5,11 +5,11 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     
     <!-- stylesheets -->
-    <%= stylesheet_link_tag "site.css" %>
+    <%= stylesheet_link_tag "main.css?#{timestamp}" %>
     
     <!-- javascripts -->
-    <script src="https://github.com/livereload/livereload-js/raw/master/dist/livereload.js?host=localhost"></script>
-    <%= javascript_include_tag  "app.pack.js" %>
+    <%= javascript_include_tag  "vendors/core/livereload.js?host=localhost" if :env == 'development' %>
+    <%= javascript_include_tag  "main.js?#{timestamp}" %>
     
     <%= yield_content :head %>
   </head>
