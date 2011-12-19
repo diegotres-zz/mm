@@ -1,6 +1,8 @@
 //= require_self
 // ---------------------------------------------|
-// Javascripts combined in one file.
+// Javascripts combined.
+// Generated at: {TIMESTAMP}
+// 
 // Modules included:
 // 
 

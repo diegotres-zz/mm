@@ -1,5 +1,3 @@
-
-
 # Routes
 ###############################################################################
 
@@ -33,13 +31,29 @@ helpers do
 end
 
 
+module Middleman::Features::TimestampReplacement
+  class << self
+    def registered(app)
+      app.after_build do
+        Dir.glob('./build/**/*').each do | path |
+          if( FileTest.file? ( path ) )
+            fileContents = File.read ( path )
+            fileContents = fileContents.gsub( '{TIMESTAMP}', Time.now.to_s )
+            File.open( path, 'w' ) { | file | file.puts fileContents }
+          end
+        end
+      end
+    end
+    alias :included :registered
+  end
+end
+
+
 
 # BUILD CONFIGURATION
 ###############################################################################
 
 configure :build do
-  
-  set :environment, "production"
   
   # Enable cache buster
   activate :cache_buster
@@ -62,4 +76,6 @@ configure :build do
   
   # Or use a different image path
   # set :http_path, "/Content/images/"
+  
+  activate :timestamp_replacement
 end
