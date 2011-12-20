@@ -31,6 +31,9 @@ helpers do
 end
 
 
+# Timestamp replacement
+###############################################################################
+
 module Middleman::Features::TimestampReplacement
   class << self
     def registered(app)
@@ -50,7 +53,7 @@ end
 
 
 
-# BUILD CONFIGURATION
+# Build configuration
 ###############################################################################
 
 configure :build do
@@ -71,11 +74,10 @@ configure :build do
   activate :relative_assets
     
   # Compress PNGs after build
-  # require "middleman-smusher"
   activate :smusher
   
-  # Or use a different image path
-  # set :http_path, "/Content/images/"
-  
   activate :timestamp_replacement
+
+  # different image path
+  # set :http_path, "/Content/images/"
 end
