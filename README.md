@@ -1,4 +1,4 @@
-## Put the code below in your .bash_profile
+## Put the code below in your .bash_profile (YES! I'LL IMPROVE THIS)
 
     # @param action
     # @param project_name
