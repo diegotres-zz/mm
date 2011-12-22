@@ -1,6 +1,6 @@
 
 // DEFINE A GLOBAL
-var global = typeof window !== "undefined" ? window : this;
+var global = (function(){return this;}());
 
 // CREATING NAMESPACES
 ;(function( global, undefined ) {
